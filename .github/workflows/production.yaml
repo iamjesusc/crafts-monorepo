@@ -27,6 +27,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./projects/compare
 
       - name: Build
         run: npm run build
