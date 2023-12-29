@@ -34,7 +34,7 @@ jobs:
         working-directory: ./projects/compare
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.1
+        uses: nwtgck/actions-netlify@v2.0
         with:
           publish-dir: './projects/compare/dist'
           production-branch: main
