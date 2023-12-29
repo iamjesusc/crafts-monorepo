@@ -31,6 +31,7 @@ jobs:
 
       - name: Build
         run: npm run build
+        working-directory: ./projects/compare
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.1
