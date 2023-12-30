@@ -64,7 +64,7 @@
 
     .after {
       mask: linear-gradient(to right, #0000 0, var(--pos, 50%), #000 0);
-      background: linear-gradient(to right, var(--color-2), var(--color-1), var(--color-3));
+      background: linear-gradient(to right, var(--color-1), var(--color-3), var(--color-2));
     }
 
     .range {
@@ -72,19 +72,20 @@
       appearance: none;
       background: none;
       cursor: col-resize;
+      height: 100vh;
       -webkit-tap-highlight-color: transparent;
 
       &::-webkit-slider-thumb {
         appearance: none;
         width: 4px;
-        height: 100dvh;
+        height: 100vh;
         background-color: CanvasText;
       }
 
       &::-moz-range-thumb {
         appearance: none;
         width: 4px;
-        height: 100dvh;
+        height: 100vh;
         background-color: CanvasText;
       }
     }
@@ -96,9 +97,10 @@
       right: 1rem;
       padding: 0;
       border: 0;
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 1.2rem;
+      height: 1.2rem;
       border-radius: 50%;
+      cursor: pointer;
     }
 
     input[type='color']::-webkit-color-swatch-wrapper {
