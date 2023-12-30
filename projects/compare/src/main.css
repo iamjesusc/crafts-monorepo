@@ -1,3 +1,137 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer demo {
+  .before {
+    --color-1: var(--base, dark light);
+    --color-2: oklch(from var(--color-1) 75% 0.2 h);
+    --color-3: oklch(from var(--color-1) 95% 0.2 h);
+  }
+
+  .after {
+    --color-1: var(--base, dark light);
+    --color-2: oklch(from var(--color-1) calc(l - 0.2) c calc(h - 45));
+    --color-3: oklch(from var(--color-1) calc(l - 0.4) c calc(h - 90));
+  }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .container__section--images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 15rem;
+    height: max-content;
+    margin-top: 1rem;
+
+    > img {
+      max-inline-size: 100%;
+      max-block-size: 80dvh;
+      cursor: pointer;
+    }
+  }
+
+  .container__compare {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    > * {
+      grid-area: 1 / 1;
+    }
+
+    > section {
+      display: grid;
+      place-content: center;
+
+      > img {
+        max-inline-size: 100%;
+        max-block-size: 80dvh;
+        user-select: none;
+      }
+    }
+
+    .before {
+      mask: linear-gradient(to right, #000 0, var(--pos, 50%), #0000 0);
+      background: linear-gradient(to right, var(--color-2), var(--color-3), var(--color-1));
+    }
+
+    .after {
+      mask: linear-gradient(to right, #0000 0, var(--pos, 50%), #000 0);
+      background: linear-gradient(to right, var(--color-2), var(--color-1), var(--color-3));
+    }
+
+    .range {
+      z-index: 1;
+      appearance: none;
+      background: none;
+      cursor: col-resize;
+      -webkit-tap-highlight-color: transparent;
+
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 4px;
+        height: 100dvh;
+        background-color: CanvasText;
+      }
+
+      &::-moz-range-thumb {
+        appearance: none;
+        width: 4px;
+        height: 100dvh;
+        background-color: CanvasText;
+      }
+    }
+
+    .color {
+      z-index: 1;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0;
+      border: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+    }
+
+    input[type='color']::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+
+    input[type='color']::-webkit-color-swatch {
+      border: 2px solid dark light;
+      border-radius: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .container__section--images {
+      width: 7rem;
+    }
+  }
+}
+
+@layer demo.support {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  html {
+    block-size: 100%;
+    color-scheme: dark light;
+  }
+
+  body {
+    min-block-size: 100%;
+    font-family: system-ui, sans-serif;
+    display: grid;
+  }
+}

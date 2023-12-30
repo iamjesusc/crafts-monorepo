@@ -5,11 +5,29 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/main.css" />
-    <title>Vite App</title>
+    <title>Compare | Crafts</title>
   </head>
   <body>
-    <div id="app" class="w-screen h-screen grid place-content-center">
-      <h1 class="text-3xl font-bold">Hello World! my name Is Jesus</h1>
+    <div id="app" class="container">
+      <section class="container__section--images">
+        <img class="section__image" src="./public/image-1.png" alt="Transhuman man is jumping." />
+        <img class="section__image" src="./public/image-4.png" alt="Transhuman man is jumping." />
+        <img class="section__image" src="./public/image-2.png" alt="Transhuman girls width coffee." />
+        <img class="section__image" src="./public/image-5.png" alt="Transhuman man is jumping." />
+        <img class="section__image" src="./public/image-3.png" alt="Transhuman man is jumping." />
+      </section>
+
+      <main class="container__compare">
+        <section class="before">
+          <img class="compare__image" src="./public/image-4.png" alt="Transhuman girls width coffee." />
+        </section>
+
+        <section class="after">
+          <img src="./public/image-2.png" class="compare__image" alt="Transhuman man is jumping." />
+        </section>
+        <input type="range" class="range" id="range" step="0.1" />
+        <input id="theme" type="color" class="color" value="#ff1493" />
+      </main>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
