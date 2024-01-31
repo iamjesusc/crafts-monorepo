@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="favicon.svg" />
+		<title>Type Quote</title>
+		<style>
+			* {
+				padding: 0;
+				position: relative;
+				margin: 0;
+				box-sizing: border-box;
+				border-color: rgb(255, 255, 255);
+			}
+
+			body {
+				background-color: #40414f;
+				color: white;
+				font-family: system-ui;
+			}
+
+			.container {
+				display: grid;
+				place-content: center;
+				width: 100vw;
+				height: 100vh;
+			}
+
+			.box-content {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				border: 1px solid gray;
+				padding: 30px;
+				min-width: 50%;
+				width: 500px;
+				height: 300px;
+				border-radius: 10px;
+			}
+
+			.content {
+				flex-grow: 1;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			.title {
+				text-align: center;
+			}
+
+			.call-button {
+				font-size: 14px;
+			}
+
+			@media screen and (max-width: 600px) {
+				.container {
+					display: flex;
+					align-items: center;
+				}
+
+				.title {
+					font-size: 20px;
+				}
+				.box-content {
+					width: 90%;
+					height: auto;
+					min-height: 35%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container" id="app">
+			<div class="box-content">
+				<h1 class="title">Type Quote</h1>
+
+				<!-- Un div para mostrar el resultado -->
+				<main class="content">
+					<p class="result" id="result"></p>
+					<div>
+						<small>Author: </small>
+						<strong class="author" id="author"></strong>
+					</div>
+				</main>
+
+				<!-- Boton para llamar a la función -->
+				<button class="call-button" id="call-button">New quote</button>
+			</div>
+			<script src="main.js"></script>
+		</div>
+	</body>
+</html>
