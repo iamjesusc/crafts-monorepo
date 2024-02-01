@@ -1,0 +1,11 @@
+/* Hover */
+
+.backdrop {
+	background: rgba(100, 100, 100, 0.05);
+	backdrop-filter: blur(1.6rem);
+	border-radius: 1rem;
+	position: absolute;
+	z-index: -5;
+	opacity: 0.9;
+	transition: 500ms ease-in-out;
+}
