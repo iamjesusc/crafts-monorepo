@@ -1,0 +1,29 @@
+.header {
+	width: 100vw;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	position: sticky;
+	width: 95vw;
+	top: 0;
+	left: 0;
+	z-index: 30;
+	border-radius: 1rem;
+}
+
+.nav-list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem;
+	cursor: pointer;
+	position: relative;
+	padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+	.nav-list {
+		flex-direction: column;
+	}
+}
