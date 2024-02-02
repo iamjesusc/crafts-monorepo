@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mind Reader</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="shortcut icon" href="favicon-32x32.png" />
+	</head>
+
+	<body>
+		<main class="main">
+			<div id="main-output" class="main-output">
+				<header class="header">
+					<figure class="logo">
+						<img src="favicon-32x32.png" alt="reader mind logo" />
+					</figure>
+					<p class="header-title">Reading yo...</p>
+					<button class="close-button" id="cancel"><img src="x-button.png" /></button>
+				</header>
+
+				<output id="output-legend" class="output"></output>
+				<div class="range">
+					<span id="range-current" class="range-current"></span>
+				</div>
+			</div>
+
+			<div class="main-result" id="main-result">
+				<header class="header">
+					<figure class="logo">
+						<img src="favicon-32x32.png" alt="reader mind logo" />
+					</figure>
+					<p class="header-title">Mind Reader</p>
+					<button class="close-button" id="close-button"><img src="x-button.png" /></button>
+				</header>
+
+				<p>You're thinking of the number <span id="result-mind-reader"></span>.</p>
+			</div>
+
+			<header class="header">
+				<figure class="logo">
+					<img src="favicon-32x32.png" alt="reader mind logo" />
+				</figure>
+				<p class="header-title">Mind Reader</p>
+			</header>
+
+			<form id="main-form" class="main-form">
+				<legend>Think of a number between 1 and 10:</legend>
+				<input type="text" name="number" class="form-input" />
+				<button class="form-button" type="submit">Read my mind</button>
+			</form>
+		</main>
+
+		<script src="main.js"></script>
+	</body>
+</html>
