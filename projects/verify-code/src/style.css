@@ -1,0 +1,84 @@
+html {
+	font-size: 62.5%;
+	font-family: system-ui;
+}
+
+body {
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+h1 {
+	font-size: 6rem;
+	text-align: center;
+	font-family: system-ui;
+	color: #ffffff;
+}
+
+main {
+	display: flex;
+	gap: 4rem;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+}
+
+main > div {
+	padding: 10rem;
+	flex-direction: column;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 5rem;
+}
+
+main > div > div {
+	display: flex;
+	gap: 1rem;
+}
+
+p {
+	color: #a0a0a0;
+	font-size: 1.6rem;
+}
+
+input {
+	aspect-ratio: 1/1;
+	max-width: 7rem;
+	border-radius: 1rem;
+	border: 0.1rem solid #555555;
+	font-size: 4rem;
+	text-align: center;
+	outline: none;
+	background: black;
+	color: white;
+}
+
+input::selection {
+	background-color: transparent;
+}
+
+button {
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	font-size: 1.6rem;
+	border: 0.1rem solid #555555;
+	background: black;
+	color: #555555;
+	cursor: pointer;
+	transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+button:hover {
+	background-color: #303030;
+	color: white;
+}
